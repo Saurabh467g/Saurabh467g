@@ -1,0 +1,6 @@
+{
+  "name": "GitShowcase Studio",
+  "description": "Professional GitHub profile visualizer with real-time API data, interactive 3D hanging lanyard ID card badge, anime slide kinetic typography, full contribution heatmap, trophy showcase, and instant direct-import README markdown generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

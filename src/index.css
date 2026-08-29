@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-mono: 'JetBrains+Mono', monospace;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom 3D & Anime Animation Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Hologram Shimmer */
+@keyframes holoShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hologram-effect {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 128, 0.15) 0%,
+    rgba(0, 255, 255, 0.2) 25%,
+    rgba(255, 215, 0, 0.15) 50%,
+    rgba(128, 0, 255, 0.2) 75%,
+    rgba(0, 255, 128, 0.15) 100%
+  );
+  background-size: 300% 300%;
+  animation: holoShimmer 8s ease infinite;
+}
+
+/* Shimmer Gradient Text for Student Name */
+@keyframes textGradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-text-gradient {
+  background-size: 200% auto;
+  animation: textGradientShimmer 4s ease infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+/* Sliding Kinetic Text Animation */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 25s linear infinite;
+}
+
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 25s linear infinite;
+}
+
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-fast {
+  animation-duration: 14s;
+}
+
+/* Custom Scanlines */
+.scanline-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Subtle glowing pulse */
+@keyframes subtlePulse {
+  0%, 100% {
+    box-shadow: 0 0 15px -3px rgba(99, 102, 241, 0.3), 0 0 6px -2px rgba(99, 102, 241, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px 0px rgba(99, 102, 241, 0.5), 0 0 10px 0px rgba(99, 102, 241, 0.3);
+  }
+}
+
+.glow-indigo {
+  animation: subtlePulse 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232a3b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4560;
+}
